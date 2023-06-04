@@ -6,7 +6,7 @@
 /*   By: hachahbo <hachahbo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/31 01:21:40 by hachahbo          #+#    #+#             */
-/*   Updated: 2023/03/31 09:14:30 by hachahbo         ###   ########.fr       */
+/*   Updated: 2023/05/23 16:57:53 by hachahbo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char    *ft_strrev(char *str)
 
 	len = ft_strlen(str);
 	i = 0; 
-	while(i <  len/2)
+	while(i <  len / 2)
 	{
 		temp = str[i];
 		str[i] = str[len - 1 - i];

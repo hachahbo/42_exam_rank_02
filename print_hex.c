@@ -6,7 +6,7 @@
 /*   By: hachahbo <hachahbo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/10 15:30:43 by hachahbo          #+#    #+#             */
-/*   Updated: 2023/04/10 15:39:21 by hachahbo         ###   ########.fr       */
+/*   Updated: 2023/06/01 08:37:31 by hachahbo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,30 +42,12 @@ void ft_putchar (char c)
 {
 	write(1, &c, 1);
 }
-// void ft_printhex(int n)
-// {
-// 	if(n >= 16)
-// 	{
-// 		ft_printhex(n  / 16);
-// 		ft_printhex(n % 16);
-// 	}
-// 	ft_putchar("0123456789abcdef"[n]);
-// }
 
-// int main(int ac, char **av)
-// {
-
-// 	if(ac == 2)
-// 	{
-// 		long  n = ft_atoi(av[1]);
-// 		ft_printhex(n);
-// 	}
-// }
 void	print_hex(int n)
 {
 	char hex_digits[] = "0123456789abcdef";
 
-	if (n >= 16)
+	if (n > 16)
 		print_hex(n / 16);
 	write(1, &hex_digits[n % 16], 1);
 }

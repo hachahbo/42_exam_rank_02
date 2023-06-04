@@ -31,29 +31,31 @@ unsigned char	reverse_bits(unsigned char octet)
 	i = 0;
 	while(bits[i])
 	{
-		write(1, &bits[i], 1);
-		i++;
-	}
-	write(1, "\n", 1);
-	i = 0;
-	while(bits[i])
-	{
 		if(bits[i] == '1')
-		{
 			c = (c * 2) + 1;
-		}
 		else if(bits[i] == '0')
-		{
 			c = (c * 2);
-		}
 		i++;
 	}
 	return (c);
 }
+// unsigned char	reverse_bits(unsigned char octet)
+// {
+// 	int		i = 8;
+// 	unsigned char	res = 0;
+
+// 	while (i > 0)
+// 	{
+// 		res = res * 2 + (octet % 2);
+// 		octet = octet / 2;
+// 		i--;
+// 	}
+// 	return (res);
+// }
 int main()
 {
-	unsigned char c = 'x';
-	printf("befror reverse %c\n", c);
+	unsigned char c = 2;
+	printf("befror reverse %d\n", c);
 	printf("reverse bits : \n");
 	unsigned char x = reverse_bits(c);
 	printf("%d\n", x);

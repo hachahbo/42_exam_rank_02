@@ -6,7 +6,7 @@
 /*   By: hachahbo <hachahbo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 18:40:44 by hachahbo          #+#    #+#             */
-/*   Updated: 2023/04/03 23:02:26 by hachahbo         ###   ########.fr       */
+/*   Updated: 2023/05/23 17:22:36 by hachahbo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int main(int ac, char **av)
 		i = 0;
 		while(av[1][i])
 		{
-			if(av[1][i - 1] == '_' && (av[1][i] >= 'a' && av[1][i] <= 'z') )
+			if((av[1][i] >= 'a' && av[1][i] <= 'z') && av[1][i - 1] == '_')
 			{
 				av[1][i] -= 32;
 			}
@@ -31,8 +31,6 @@ int main(int ac, char **av)
 			}
 			i++;
 		}
-		write(1, "\n", 1);
 	}
-	else
-		write(1, "\n", 1);
+	write(1, "\n", 1);
 }

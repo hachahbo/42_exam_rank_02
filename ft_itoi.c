@@ -6,7 +6,7 @@
 /*   By: hachahbo <hachahbo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 15:56:45 by hachahbo          #+#    #+#             */
-/*   Updated: 2023/04/12 17:27:01 by hachahbo         ###   ########.fr       */
+/*   Updated: 2023/06/01 08:21:35 by hachahbo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,12 @@ char	*ft_itoa(int nbr)
 	long nb;
 	char *str;
 	int size;
-	int i;
 	
 	nb = nbr;
 	size = ft_len(nb);
 	str = (char *)malloc(size);
+	str[size] = '\0';
+	size--;
 	if(nb == 0)
 	{
 		str[0] = '0';
@@ -49,17 +50,15 @@ char	*ft_itoa(int nbr)
 		str[0] = '-';
 		nb *= - 1; 
 	}
-	i = size;
 	while(nb)
 	{
+		str[size] = nb % 10 + '0';
 		nb = nb / 10;
-		str[i] = nb % 10 + '0';
-		i--;
+		size--;
 	}
-	str[size] = '\0';
 	return(str);
 }
 int main()
 {
-	
+	printf("%s", ft_itoa(1000000));
 }

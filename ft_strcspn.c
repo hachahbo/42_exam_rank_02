@@ -6,7 +6,7 @@
 /*   By: hachahbo <hachahbo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/31 12:53:12 by hachahbo          #+#    #+#             */
-/*   Updated: 2023/04/02 06:49:06 by hachahbo         ###   ########.fr       */
+/*   Updated: 2023/05/23 17:31:33 by hachahbo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,6 @@ int main()
 {
 	char str[] = "hamzachahboune0123456789";
 	char str1[] = "023456789";
-	//size_t i = strcspn(str, str1);
 	size_t i = ft_strcspn(str, str1);
 	printf("%zu\n", i);
 }

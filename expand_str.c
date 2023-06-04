@@ -6,7 +6,7 @@
 /*   By: hachahbo <hachahbo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 14:40:13 by hachahbo          #+#    #+#             */
-/*   Updated: 2023/04/04 14:57:37 by hachahbo         ###   ########.fr       */
+/*   Updated: 2023/05/24 08:53:09 by hachahbo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int main(int ac, char **av)
 					break;
 				i++;
 			}
-			if(is_space(av[1][i - 1]) && av[1][i + 1] != '\0')
+			if(is_space(av[1][i - 1]))
 			{
 				int x = 3;
 				while(x)

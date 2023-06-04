@@ -6,7 +6,7 @@
 /*   By: hachahbo <hachahbo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/02 06:09:40 by hachahbo          #+#    #+#             */
-/*   Updated: 2023/04/02 22:29:02 by hachahbo         ###   ########.fr       */
+/*   Updated: 2023/05/23 17:35:18 by hachahbo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,13 @@ size_t	ft_strspn(const char *s, const char *accept)
 		}
 		if (accept[j] == '\0')
 			break;
-
 		i++;
 	}
 	return(i);
 }
 int main()
 {
-	char str[] = "12h23amza99";
+	char str[] = "1223amza";
 	char s[] = "0123456789";
 	size_t a = ft_strspn(str, s);
 	printf("%zu\n", a);

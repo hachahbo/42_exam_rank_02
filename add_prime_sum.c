@@ -6,7 +6,7 @@
 /*   By: hachahbo <hachahbo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 03:37:24 by hachahbo          #+#    #+#             */
-/*   Updated: 2023/04/04 05:58:16 by hachahbo         ###   ########.fr       */
+/*   Updated: 2023/05/24 08:05:35 by hachahbo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,33 +58,43 @@ void ft_putnbr(long nb)
 	}
 	
 }
-int main(int ac ,char **av)
+int ft_is_prime(int n)
 {
-	int i;
-	int res;
-	int n;
-	int sm;
-	
-	if(ac == 2)
+	int i = 2; 
+	if(n < 2)
+		return(0);
+	while(i * i  <= n)
 	{
-		res = ft_atoi(av[1]);
-		sm = 0;
-		n = 2;
-		while(n < res)
-		{
-			i = 2;
-			while(i < n)
-			{
-				if(n % i != 0)
-				{
-					sm = sm + i;
-				}
-					i++;
-			}
-			n++;
-		}
-		sm += res;
-		printf("%d,", sm);
-		//ft_putnbr(sm);
+		if(n % i == 0)
+			return (0);
+		i++;
 	}
+	return(1);
+}
+int sum_prime(int n)
+{
+	int i = 2;
+	int sum = 0;
+	
+	while(i <= n)
+	{
+		if(ft_is_prime(i))
+			sum += i;
+		i++; 
+	}
+	return (sum);
+}
+int main(int ac, char **av)
+{
+	int num;
+	
+	if(ac != 2)
+	{
+		write(1, "0\n", 2);
+		return (0);
+	}
+	
+	num = atoi(av[1]);
+	num = sum_prime(num);
+	printf("num %d\n", num);
 }

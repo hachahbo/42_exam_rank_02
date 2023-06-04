@@ -6,7 +6,7 @@
 /*   By: hachahbo <hachahbo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 12:31:24 by hachahbo          #+#    #+#             */
-/*   Updated: 2023/04/04 14:54:27 by hachahbo         ###   ########.fr       */
+/*   Updated: 2023/05/30 19:52:03 by hachahbo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,14 +34,14 @@ int main(int ac, char **av)
 					break;
 				i++;
 			}
-			if(is_space(av[1][i - 1]) && av[1][i + 1] != '\0')
+			if(is_space(av[1][i - 1]))
 			{
 				write(1, " ", 1);
 			}
-			if(av[1][i] >= 33 && av[1][i] <= 127 && av[1][i] != '\0')
+			if(av[1][i] >= 33 && av[1][i] <= 127)
 				write(1, &av[1][i], 1);
 			i++;
 		}
 	}
-		write(1, "\n", 1);
+	write(1, "\n", 1);
 }

@@ -6,7 +6,7 @@
 /*   By: hachahbo <hachahbo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/10 14:17:30 by hachahbo          #+#    #+#             */
-/*   Updated: 2023/04/10 15:00:49 by hachahbo         ###   ########.fr       */
+/*   Updated: 2023/06/01 08:36:54 by hachahbo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,12 +70,11 @@ int main(int ac ,char **av)
 		else
 			n = a;
 		i = 2;
-		while(i < n)
+		while(n)
 		{
-			//printf("%d", n);
-			if(a % i == 0 && b % i == 0)
+			if(a % n == 0 && b % n == 0)
 				break;
-			i++;
+			n--;
 		}
 		ft_putnbr(i);
 		write(1, "\n", 2);
